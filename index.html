@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="AI-powered handwriting analysis to reveal personality traits from your writing style">
+  <title>🖋️ Handwriting Personality Analyzer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <div class="container">
+          <nav>
+            <div class="logo">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              <span>ScriptInsight</span>
+            </div>
+            <div class="nav-links">
+              <a href="#features">Features</a>
+              <a href="#analyzer">Analyzer</a>
+              <a href="#how-it-works">How It Works</a>
+              <a href="#testimonials">Testimonials</a>
+            </div>
+            <a href="#analyzer" class="btn">Try Now</a>
+          </nav>
+        </div>
+      </header>
+    
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Discover Your Personality Through Handwriting</h1>
+            <p>Our advanced AI-powered handwriting analysis reveals hidden aspects of your personality, helping you gain deeper insights into your character traits, emotional patterns, and cognitive style.</p>
+            <div class="hero-buttons">
+              <a href="#analyzer" class="btn">Analyze Your Handwriting</a>
+              <a href="#how-it-works" class="btn btn-outline">Learn More</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Person writing in notebook">
+          </div>
+        </div>
+      </section>
+    
+      <section class="features" id="features">
+        <div class="container">
+          <div class="section-title">
+            <h2>Discover Our Features</h2>
+            <p>Our handwriting analysis tool uses advanced algorithms to detect subtle patterns in your handwriting that reveal key personality traits.</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <h3>Personality Assessment</h3>
+              <p>Discover your core personality traits such as extroversion, emotional stability, openness to experience, and more through your handwriting style.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <h3>Detailed Reports</h3>
+              <p>Receive comprehensive analysis with detailed explanations of each trait, including strengths, potential challenges, and personal growth opportunities.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3>Emotional Insights</h3>
+              <p>Understand your emotional patterns, stress response, and communication style through the pressure, spacing, and flow of your handwriting.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="analyzer" id="analyzer">
+        <div class="container">
+          <div class="section-title">
+            <h2>Analyze Your Handwriting</h2>
+            <p>Upload a sample of your handwriting to discover insights about your personality.</p>
+          </div>
+          <div class="analyzer-container">
+            <div class="upload-section">
+              <h3>Upload Handwriting Sample</h3>
+              <div class="upload-area" id="drop-area">
+                <div class="upload-icon">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="17 8 12 3 7 8"></polyline>
+                    <line x1="12" y1="3" x2="12" y2="15"></line>
+                  </svg>
+                </div>
+                <p>Drag and drop your handwriting sample here</p>
+                <p>or</p>
+                <input type="file" id="fileElem" accept="image/png, image/jpeg, application/pdf" hidden>
+                <button class="btn" id="browseBtn">Browse Files</button>
+                <p class="upload-note">Accepted formats: JPG, PNG (max 5MB)</p>
+                <div id="file-name-display" class="file-name-display"></div>
+              </div>
+              <p>For best results:</p>
+              <ul>
+                <li>Write at least 5–6 lines of text on unlined paper</li>
+                <li>Use a pen rather than a pencil</li>
+                <li>Write naturally as you would normally</li>
+                <li>Include your signature at the end</li>
+              </ul>
+            </div>
+  
+            <div class="results-section">
+              <h3>Your Personality Profile</h3>
+              <button class="btn" id="analyze-button" style="width: 100%; margin-bottom: 20px;">Analyze Handwriting</button>
+              <div id="result-output">
+                <!-- Results will appear here after analysis -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="how-it-works" id="how-it-works">
+        <div class="container">
+          <div class="section-title">
+            <h2>How It Works</h2>
+            <p>Our advanced AI-powered system analyzes over 300 handwriting elements to create your personality profile.</p>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <h3>Upload</h3>
+              <p>Upload a sample of your handwriting through our secure system.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <h3>Analysis</h3>
+              <p>Our AI analyzes handwriting patterns, pressure, spacing, and more.</p>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <h3>Results</h3>
+              <p>Receive a detailed personality profile with insights and explanations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <section class="testimonials" id="testimonials">
+        <div class="container">
+          <div class="section-title">
+            <h2>What Our Users Say</h2>
+            <p>Discover how ScriptInsight has helped people gain deeper insights into their personalities.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                "I was amazed at how accurate the analysis was! The personality traits matched exactly what I know about myself, and I discovered new insights that helped me understand my behavior patterns better."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">JS</div>
+                <div class="author-info">
+                  <h4>Jennifer S.</h4>
+                  <p>Marketing Director</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                "As a psychologist, I was skeptical at first, but the scientific approach and accuracy of ScriptInsight's analysis impressed me. I now recommend it to my clients as a supplementary tool for self-discovery."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">DM</div>
+                <div class="author-info">
+                  <h4>Dr. Michael T.</h4>
+                  <p>Clinical Psychologist</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card">
+              <div class="testimonial-text">
+                "The insights about my communication style helped me improve my professional relationships. Understanding how my personality is reflected in my writing was truly eye-opening."
+              </div>
+              <div class="testimonial-author">
+                <div class="author-image">AL</div>
+                <div class="author-info">
+                  <h4>Alex L.</h4>
+                  <p>Software Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <footer>
+        <div class="container">
+          <div class="footer-container">
+            <div class="footer-about">
+              <h3>ScriptInsight</h3>
+              <p>ScriptInsight uses advanced AI technology to analyze handwriting and reveal personality traits, helping individuals gain deeper insights into themselves.</p>
+              <div class="social-links">
+                <a href="#" aria-label="Facebook">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                  </svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer-links">
+              <h3>Quick Links</h3>
+              <ul>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#analyzer">Analyzer</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Resources</h3>
+              <ul>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Research</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+            </div>
+            <div class="footer-links">
+              <h3>Legal</h3>
+              <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Cookie Policy</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="copyright">
+            <p>&copy; 2025 ScriptInsight. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <script src="script.js"></script>
+  </body>
